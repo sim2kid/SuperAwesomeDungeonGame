@@ -19,9 +19,9 @@ namespace SuperAwesomeDungeonGame
 
         public Item(Item other) 
         {
-            other.Name = Name;
-            other.Amount = Amount;
-            other.IsStackable = IsStackable;
+            Name = other.Name;
+            Amount = other.Amount;
+            IsStackable = other.IsStackable;
         }
 
         public Item() 

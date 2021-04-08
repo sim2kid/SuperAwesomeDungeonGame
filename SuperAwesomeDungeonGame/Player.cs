@@ -6,11 +6,11 @@ namespace SuperAwesomeDungeonGame
 {
     class Player : Creature
     {
-        protected Inventory inventory;
+        public Inventory Inventory;
 
         public Player(string _name, double _maxHealth) : base(_name, _maxHealth)
         {
-            inventory = new Inventory();
+            Inventory = new Inventory();
         }
     }
 }
