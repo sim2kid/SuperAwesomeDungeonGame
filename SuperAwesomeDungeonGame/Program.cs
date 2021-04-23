@@ -8,7 +8,23 @@ namespace SuperAwesomeDungeonGame
     {
         static void Main(string[] args)
         {
-            explorationLoopTest();
+            List<string> milestones = new List<string>();
+            milestones.Add("Combat Loop Test");
+            milestones.Add("Exploration Loop Test");
+            IO.Out("Hello! Welcome to SuperAwesomeDungeonGame! Here are the compleated parts so far! Please select one to play!");
+            int doThis = IO.MakeChoice(milestones);
+            switch (doThis) 
+            {
+                case 0:
+                    combatLoopTest();
+                    break;
+                case 1:
+                    explorationLoopTest();
+                    break;
+                default:
+                    IO.Out("That's all!");
+                    break;
+            }
         }
 
         static void testDoors() 

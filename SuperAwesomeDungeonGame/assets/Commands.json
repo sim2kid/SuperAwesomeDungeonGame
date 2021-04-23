@@ -82,6 +82,26 @@
       "argument": "west"
     },
     {
+      "name": "north",
+      "command": "go",
+      "argument": "north"
+    },
+    {
+      "name": "east",
+      "command": "go",
+      "argument": "east"
+    },
+    {
+      "name": "south",
+      "command": "go",
+      "argument": "south"
+    },
+    {
+      "name": "west",
+      "command": "go",
+      "argument": "west"
+    },
+    {
       "name": "i",
       "command": "inventory",
       "argument": ""
