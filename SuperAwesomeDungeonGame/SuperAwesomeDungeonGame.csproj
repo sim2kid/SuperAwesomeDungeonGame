@@ -5,4 +5,29 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="assets\Commands.json" />
+    <None Remove="Data\Commands.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="assets\Commands.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Data\Commands.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Attack.cs">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
 </Project>

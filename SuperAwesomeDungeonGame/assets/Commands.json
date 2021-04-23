@@ -1,0 +1,90 @@
+{
+  "commands": [
+    {
+      "name": "move",
+      "alts": [
+        "go",
+        "traverse",
+        "move",
+        "continue"
+      ]
+    },
+    {
+      "name": "pickup",
+      "alts": [
+        "pickup",
+        "pick-up",
+        "grab",
+        "collect",
+        "take",
+        "loot"
+      ]
+    },
+    {
+      "name": "look",
+      "alts": [
+        "look",
+        "check",
+        "inspect"
+      ]
+    },
+    {
+      "name": "inventory",
+      "alts": [
+        "inventory",
+        "inv"
+      ]
+    },
+    {
+      "name": "enter",
+      "alts": [
+        "enter",
+        "goto"
+      ]
+    },
+    {
+      "name": "exit",
+      "alts": [
+        "exit",
+        "leave"
+      ]
+    },
+    {
+      "name": "blowup",
+      "alts": [
+        "blowup",
+        "blow-up",
+        "explode",
+        "blast",
+        "bomb"
+      ]
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "n",
+      "command": "go",
+      "argument": "north"
+    },
+    {
+      "name": "e",
+      "command": "go",
+      "argument": "east"
+    },
+    {
+      "name": "s",
+      "command": "go",
+      "argument": "south"
+    },
+    {
+      "name": "w",
+      "command": "go",
+      "argument": "west"
+    },
+    {
+      "name": "i",
+      "command": "inventory",
+      "argument": ""
+    }
+  ]
+}

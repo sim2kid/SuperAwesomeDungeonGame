@@ -1,6 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using System.Text.RegularExpressions;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 
 namespace SuperAwesomeDungeonGame
 {
@@ -26,12 +31,10 @@ namespace SuperAwesomeDungeonGame
             Out("\n");
             return toReturn;
         }
-
         public static int MakeChoice(List<string> choices)
         {
             return MakeChoice(choices, "> ");
         }
-
         public static int MakeChoice(List<string> choices, object prefix)
         {
             while (true) 
@@ -60,6 +63,41 @@ namespace SuperAwesomeDungeonGame
                     Out("Input must be a number.");
                 }
             }
+        }
+        public static string[] ListenCommands(object toPrint, object prefix) 
+        {
+            while (true)
+            {
+                try
+                {
+                    string command = In(toPrint, prefix);
+                    string[] parts = Regex.Split(command.Trim().ToLower(), "\\s+");
+                    return parts;
+                }
+                catch (Exception e)
+                {
+                    Out("I don't understand.");
+                }
+            }
+        }
+        public static string LoadFile(string fileName) 
+        {
+            try
+            {
+                string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"assets\", fileName);
+                string str = File.ReadAllText(path);
+                return str;
+            }
+            catch (Exception e) 
+            {
+               IO.Out(e);
+               return null;
+            }
+        }
+        public static CommandJSON ToJSON(string toParse) 
+        {
+            CommandJSON json = JsonConvert.DeserializeObject<CommandJSON>(toParse);
+            return json;
         }
     }
 }
